@@ -1,78 +1,16 @@
 {% extends 'layouts/layout-transactional.html' %}
 
 {% block pageTitle %}
-  NHS.UK prototype kit - Check your answers template
+  UECDI Care advice demo
 {% endblock %}
 
 {% block content %}
-
-<style type="text/css">
-  .panel {
-    border-radius: 0;
-    box-shadow: 0 10px 20px rgba(0,0,0,.2);
-}
-
-.panel-primary {
-    border-color: #0072c6;
-}
-.panel {
-    margin-bottom: 20px;
-    /*background-color: #fff;*/
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
-    box-shadow: 0 1px 1px rgba(0,0,0,.05);
-}
-.panel-primary>.panel-heading {
-    color: #fff;
-    background-color: #0072c6;
-    border-color: #0072c6;
-}
-
-.panel-heading {
-    border-radius: 0;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-.panel-heading {
-    padding: 10px 15px;
-    border-bottom: 1px solid transparent;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-}
-.panel-body {
-    padding: 15px;
-}
-.checkbox, .radio {
-    position: relative;
-    display: block;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-.thinbottomhr {
-    margin-bottom: 5px;
-}
-
-hr {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border: 0;
-    border-top: 1px solid #eee;
-}
-hr {
-    height: 0;
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-}
-
-</style>
 
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-three-quarters">
 
     <h1 class="nhsuk-u-margin-top-4">
-      Post call care advice demo
+      UECDI Care advice demo
     </h1>
 
     <div class="nhsuk-warning-callout">
@@ -99,13 +37,14 @@ hr {
 <details class="nhsuk-details nhsuk-expander">
   <summary class="nhsuk-details__summary">
     <span class="nhsuk-details__summary-text">
-      Consultation report
+      Example consultation report
     </span>
   </summary>
   <div class="nhsuk-details__text">
     <p>
       <ul>
 
+        <li><a href="/files/111_male_palpitations _TEST_USER1.pdf">PDF View</a></li>
         <li>Case ID 53b15dac-debd-43e0-9e41-03f428a1a8a7</li>
         <li>Created on 07/09/2017 12:44:41</li>
         <li>Pathways R14.0.0_IUC_v1</li>
@@ -358,13 +297,13 @@ hr {
 
 <h2>Audio care advice</h2>
 
-      <a href="/files/sample-audio-1.wav">
+      <a href="/files/computer-generated.mp3">
         <button class="nhsuk-button" type="submit">
           Computer generated
         </button>
       </a>
 
-      <a href="lo-fi">
+      <a href="/files/human-generated.mp3">
         <button class="nhsuk-button" type="submit">
           Human generated
         </button>
@@ -373,15 +312,15 @@ hr {
       <br>
 
 <h2>Care advice page</h2>
-      <a href="lo-fi">
+      <a href="simple">
         <button class="nhsuk-button" type="submit">
-          Lo-fi demo
+          Simple demo
         </button>
       </a>
 
-      <a href="hi-fi">
+      <a href="advanced">
         <button class="nhsuk-button" type="submit">
-          Hi-fi demo
+          Advanced demo
         </button>
       </a>
 

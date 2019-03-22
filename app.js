@@ -63,7 +63,7 @@ utils.addNunjucksFilters(nunjucksAppEnv)
 
 
 // Session uses service name to avoid clashes with other prototypes
-const sessionName = 'nhsuk-prototype-kit-' + (Buffer.from(config.serviceName, 'utf8')).toString('hex')
+const sessionName = 'uecdi-care-advice-demo' + (Buffer.from(config.serviceName, 'utf8')).toString('hex')
 let sessionOptions = {
   secret: sessionName,
   cookie: {

@@ -53,6 +53,15 @@ function compileImages() {
   .pipe(gulp.dest('public/images'));
 }
 
+// Compile Files
+function compileFiles() {
+  return gulp.src([
+    'app/assets/files/**/*.*',
+  ])
+  .pipe(gulp.dest('public/files'));
+}
+
+
 // Start nodemon
 function startNodemon(done) {
   const server = nodemon({
@@ -105,6 +114,7 @@ function watch() {
   gulp.watch('app/assets/sass/**/*.scss', compileStyles);
   gulp.watch('app/assets/javascript/**/*.js', compileScripts);
   gulp.watch('app/assets/images/**/*.*', compileImages);
+  gulp.watch('app/assets/files/**/*.*', compileFiles);
   gulp.watch('docs/assets/sass/**/*.scss', compileStyles);
   gulp.watch('docs/assets/javascript/**/*.js', compileScripts);
   gulp.watch('docs/assets/images/**/*.*', compileImages);
@@ -115,5 +125,5 @@ exports.compileStyles = compileStyles;
 exports.compileScripts = compileScripts;
 exports.cleanPublic = cleanPublic;
 
-gulp.task('build', gulp.series(cleanPublic, compileStyles, compileScripts, compileImages));
+gulp.task('build', gulp.series(cleanPublic, compileStyles, compileScripts, compileImages, compileFiles));
 gulp.task('default', gulp.series(startNodemon, startBrowserSync, watch));
